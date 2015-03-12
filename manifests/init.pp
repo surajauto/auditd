@@ -41,7 +41,7 @@ class auditd_jabil {
   } 
 
   file { '/etc/audit/auditd.conf':
-    ensure           => 'present',
+    ensure           => file,
     source           => 'puppet:///modules/auditd_jabil/auditd.conf',
     owner            => 'root',
     group            => 'root',
@@ -51,7 +51,7 @@ class auditd_jabil {
   }
 
   file { '/etc/audit/rules.d/audit.rules':
-    ensure           => 'present',
+    ensure           => file,
     source           => 'puppet:///modules/auditd_jabil/audit.rules',
     owner            => 'root',
     group            => 'root',
