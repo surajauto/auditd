@@ -46,8 +46,8 @@ class auditd_jabil::service inheris auditd_jabil {
       ensure          => $service_ensure,
       enable          => $service_enable,
       name            => $service_name,
-      hasstatus       => true,
-      hasrestart      => true,
+      hasstatus       => $service_hasstatus,
+      hasrestart      => $service_hasrestart,
     }
   }
 
