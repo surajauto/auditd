@@ -35,7 +35,7 @@
 #
 # Copyright 2014 Jabil, unless otherwise noted.
 #
-class auditd_jabil::service inheris auditd_jabil {
+class auditd_jabil::service inherits auditd_jabil {
 
   if ! ($service_ensure in [ 'running', 'stopped' ]) {
     fail('service_ensure parameter must be running or stopped')
