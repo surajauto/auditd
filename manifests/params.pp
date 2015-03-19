@@ -36,25 +36,26 @@
 # Copyright 2014 Jabil, unless otherwise noted.
 #
 class auditd_jabil::params {
-
+  
   # Basic Config 
-  $service_ensure          = "running",
-  $service_enable          = true,
-  $service_name            = "auditd",
-  $service_hasstatus       = true,
-  $service_hasrestart      = true,
-  $package_name            = "auditd",
-  $package_ensure          = "present",
-  $auditd_file             = '/etc/audit/auditd.conf',
-  $auditd_file_ensure      = file,
-  $auditd_file_source      = 'puppet:///modules/auditd_jabil/auditd.conf',
-  $auditd_file_owner       = "root",
-  $auditd_file_group       = "root",
-  $auditd_file_mode        = "0640",
-  $audit_rules_file_ensure = file,
-  $audit_rules_file_source = 'puppet:///modules/auditd_jabil/audit_rules.conf',
-  $audit_rules_file_owner  = "root",
-  $audit_rules_file_group  = "root",
-  $audit_rules_file_mode   = "0640",
+  $service_manage          = true
+  $service_ensure          = "running"
+  $service_enable          = true
+  $service_name            = "auditd"
+  $service_hasstatus       = true
+  $service_hasrestart      = true
+  $package_name            = "auditd"
+  $package_ensure          = "present"
+  $auditd_file             = '/etc/audit/auditd.conf'
+  $auditd_file_ensure      = file
+  $auditd_file_source      = 'puppet:///modules/auditd_jabil/auditd.conf'
+  $auditd_file_owner       = "root"
+  $auditd_file_group       = "root"
+  $auditd_file_mode        = "0640"
+  $audit_rules_file_ensure = file
+  $audit_rules_file_source = 'puppet:///modules/auditd_jabil/audit_rules.conf'
+  $audit_rules_file_owner  = "root"
+  $audit_rules_file_group  = "root"
+  $audit_rules_file_mode   = "0640"
 
 }
