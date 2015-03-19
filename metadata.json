@@ -1,6 +1,6 @@
 {
   "name": "jabil-auditd_jabil",
-  "version": "0.1.0",
+  "version": "0.5.0",
   "author": "sillgen",
   "summary": "Configures SSHD to Jabil Standards",
   "license": "Apache 2.0",
