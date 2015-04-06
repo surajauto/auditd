@@ -1,4 +1,4 @@
-# == Class: auditd_jabil
+# == Class: auditd
 #
 # Ensures auditd configuration is per Jabil Standard
 #
@@ -23,7 +23,7 @@
 #
 # === Examples
 #
-#  class { auditd_jabil:
+#  class { auditd:
 #    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #  }
 #
@@ -35,7 +35,7 @@
 #
 # Copyright 2014 Jabil, unless otherwise noted.
 #
-class auditd_jabil::service inherits auditd_jabil {
+class auditd::service inherits auditd {
 
   if ! ($service_ensure in [ 'running', 'stopped' ]) {
     fail('service_ensure parameter must be running or stopped')

@@ -1,4 +1,4 @@
-# == Class: auditd_jabil
+# == Class: auditd
 #
 # Ensures auditd configuration is per Jabil Standard
 #
@@ -23,7 +23,7 @@
 #
 # === Examples
 #
-#  class { auditd_jabil:
+#  class { auditd:
 #    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #  }
 #
@@ -35,26 +35,26 @@
 #
 # Copyright 2014 Jabil, unless otherwise noted.
 #
-class auditd_jabil (
-  $service_ensure  = $auditd_jabil::params::service_ensure,
-  $service_enable  = $auditd_jabil::params::service_enable,
-  $service_name  = $auditd_jabil::params::service_name,
-  $service_hasstatus  = $auditd_jabil::params::service_hasstatus,
-  $service_hasrestart  = $auditd_jabil::params::service_hasrestart,
-  $package_name  = $auditd_jabil::params::package_name,
-  $package_ensure  = $auditd_jabil::params::package_ensure,
-  $auditd_file  = $auditd_jabil::params::auditd_file,
-  $auditd_file_ensure  = $auditd_jabil::params::auditd_file_ensure,
-  $auditd_file_source  = $auditd_jabil::params::auditd_file_source,
-  $auditd_file_owner  = $auditd_jabil::auditd_file_owner,
-  $auditd_file_group  = $auditd_jabil::auditd_file_group,
-  $auditd_file_mode  = $auditd_jabil::params::auditd_file_mode,
-  $audit_rules_file_ensure  = $auditd_jabil::params::audit_rules_file_ensure,
-  $audit_rules_file_source  = $auditd_jabil::params::audit_rules_file_source,
-  $audit_rules_file_owner  = $auditd_jabil::params::audit_rules_file_owner,
-  $audit_rules_file_group  = $auditd_jabil::params::audit_rules_file_group,
-  $audit_rules_file_mode  = $auditd_jabil::params::audit_rules_file_mode,
+class auditd (
+  $service_ensure  = $auditd::params::service_ensure,
+  $service_enable  = $auditd::params::service_enable,
+  $service_name  = $auditd::params::service_name,
+  $service_hasstatus  = $auditd::params::service_hasstatus,
+  $service_hasrestart  = $auditd::params::service_hasrestart,
+  $package_name  = $auditd::params::package_name,
+  $package_ensure  = $auditd::params::package_ensure,
+  $auditd_file  = $auditd::params::auditd_file,
+  $auditd_file_ensure  = $auditd::params::auditd_file_ensure,
+  $auditd_file_source  = $auditd::params::auditd_file_source,
+  $auditd_file_owner  = $auditd::auditd_file_owner,
+  $auditd_file_group  = $auditd::auditd_file_group,
+  $auditd_file_mode  = $auditd::params::auditd_file_mode,
+  $audit_rules_file_ensure  = $auditd::params::audit_rules_file_ensure,
+  $audit_rules_file_source  = $auditd::params::audit_rules_file_source,
+  $audit_rules_file_owner  = $auditd::params::audit_rules_file_owner,
+  $audit_rules_file_group  = $auditd::params::audit_rules_file_group,
+  $audit_rules_file_mode  = $auditd::params::audit_rules_file_mode,
   
-) inherits auditd_jabil::params {
+) inherits auditd::params {
 
 }
