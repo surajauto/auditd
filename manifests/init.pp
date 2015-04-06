@@ -45,8 +45,6 @@ class auditd (
   $package_ensure  = $auditd::params::package_ensure,
   $auditd_file  = $auditd::params::auditd_file,
   $auditd_file_ensure  = $auditd::params::auditd_file_ensure,
-  $auditd_file_source  = $auditd::params::auditd_file_source,
-  $auditd_file_owner  = $auditd::auditd_file_owner,
   $auditd_file_group  = $auditd::auditd_file_group,
   $auditd_file_mode  = $auditd::params::auditd_file_mode,
   $audit_rules_file_ensure  = $auditd::params::audit_rules_file_ensure,
@@ -57,10 +55,10 @@ class auditd (
   
 ) inherits auditd::params {
 
-  anchor { '::auditd::begin' } ->
-  class { '::auditd::install' } ->
-  class { '::auditd::config' } ->
-  class { '::auditd::service' } ->
-  anchor { '::auditd::end' } 
+  anchor { '::auditd::begin': } ->
+  class { '::auditd::install': } ->
+  class { '::auditd::config': } ->
+  class { '::auditd::service': } ->
+  anchor { '::auditd::end': } 
 
 }
