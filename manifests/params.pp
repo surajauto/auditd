@@ -53,7 +53,7 @@ class auditd::params {
   $auditd_file_group       = "root"
   $auditd_file_mode        = "0640"
   $audit_rules_file_ensure = file
-  $audit_rules_file_source = 'puppet:///modules/auditd/audit_rules.conf'
+  $audit_rules_file_source = 'puppet:///modules/auditd/audit.rules'
   $audit_rules_file_owner  = "root"
   $audit_rules_file_group  = "root"
   $audit_rules_file_mode   = "0640"
