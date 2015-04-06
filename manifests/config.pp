@@ -47,7 +47,7 @@ class auditd::config inherits auditd {
     require          => Package['audit'],
   }
 
-  file { '/etc/audit/rules.d/audit.rules':
+  file { $auditd_rules_file:
     ensure           => $audit_rules_file_ensure,
     source           => $audit_rules_file_source,
     owner            => $audit_rules_file_owner,
