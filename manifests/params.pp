@@ -44,7 +44,7 @@ class auditd::params {
   $service_name            = "auditd"
   $service_hasstatus       = true
   $service_hasrestart      = true
-  $package_name            = "auditd"
+  $package_name            = "audit"
   $package_ensure          = "present"
   $auditd_file             = '/etc/audit/auditd.conf'
   $auditd_file_ensure      = file
