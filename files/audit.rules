@@ -54,8 +54,8 @@
 -w /var/log/sudo.log -p wa -k actions
 
 ## log all commands executed by an effective id of 0 aka root.
--a exit,always -F arch=b64 -F euid=0 -S execve -k rootcmd
--a exit,always -F arch=b32 -F euid=0 -S execve -k rootcmd
+-a exit,always -F arch=b64 -F euid=0 -F auid!=0 -F auid!=4294967295 -S execve -k rootcmd
+-a exit,always -F arch=b32 -F euid=0 -F auid!=0 -F auid!=4294967295 -S execve -k rootcmd
 
 # Make the configuration immutable - reboot is required to change audit rules
 # 0 disable
