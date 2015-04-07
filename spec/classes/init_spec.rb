@@ -1,7 +1,7 @@
 require 'spec_helper'
-describe 'sshd_jabil' do
+describe 'auditd' do
 
   context 'with defaults for all parameters' do
-    it { should contain_class('sshd_jabil') }
+    it { should contain_class('auditd') }
   end
 end

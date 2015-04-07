@@ -1,10 +1,10 @@
 {
-  "name": "jabil-auditd_jabil",
+  "name": "lgbarn-auditd",
   "version": "0.5.0",
-  "author": "sillgen",
-  "summary": "Configures SSHD to Jabil Standards",
+  "author": "Luther Barnum",
+  "summary": "Configures auditd to Jabil Standards",
   "license": "Apache 2.0",
-  "source": "https://bitbucket.org/lgbarn/audited_jabil",
+  "source": "https://github.com/lgbarn/audited",
   "project_page": null,
   "issues_url": null,
   "dependencies": [

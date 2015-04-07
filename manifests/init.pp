@@ -55,10 +55,10 @@ class auditd (
   
 ) inherits auditd::params {
 
-  anchor { '::auditd::begin': } ->
-  class { '::auditd::install': } ->
-  class { '::auditd::config': } ->
-  class { '::auditd::service': } ->
-  anchor { '::auditd::end': } 
+  #anchor { 'auditd::begin': } ->
+  #class { 'auditd::install': } ->
+  #class { 'auditd::config': } ->
+  #class { 'auditd::service': } ->
+  #anchor { 'auditd::end': } 
 
 }
