@@ -4,12 +4,11 @@ describe 'auditd class' do
   describe 'apply audit module' do
     it 'should work with no errors' do
       pp = <<-EOS
-      include 'auditd'
-      #class { 'auditd': }
+      class { 'auditd': }
       EOS
 
       apply_manifest(pp, :catch_failures => true)
-      #apply_manifest(pp, :catch_failures => true)
+      apply_manifest(pp, :catch_changes => true)
     end
   end
   describe 'checking presence of audit package' do
