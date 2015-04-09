@@ -59,6 +59,6 @@ class auditd (
   class { 'auditd::install': } ->
   class { 'auditd::config': } ~>
   class { 'auditd::service': } ->
-  anchor { 'auditd::end': } 
+  anchor { 'auditd::end': }
 
 }

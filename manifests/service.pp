@@ -37,17 +37,17 @@
 #
 class auditd::service inherits auditd {
 
-  if ! ($service_ensure in [ 'running', 'stopped' ]) {
+  if ! ($auditd::params::service_ensure in [ 'running', 'stopped' ]) {
     fail('service_ensure parameter must be running or stopped')
   }
 
-  if $service_manage == true {
+  if $auditd::params::service_manage == true {
     service { 'auditd':
-      ensure          => $service_ensure,
-      enable          => $service_enable,
-      name            => $service_name,
-      hasstatus       => $service_hasstatus,
-      hasrestart      => $service_hasrestart,
+      ensure     => $auditd::params::service_ensure,
+      enable     => $auditd::params::service_enable,
+      name       => $auditd::params::service_name,
+      hasstatus  => $auditd::params::service_hasstatus,
+      hasrestart => $auditd::params::service_hasrestart,
     }
   }
 
