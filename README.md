@@ -1,5 +1,8 @@
 # auditd
 
+[![Build Status](https://travis-ci.org/lgbarn/lgbarn-auditd.png?branch=master)](https://travis-ci.org/lgbarn/lgbarn-auditd)
+
+
 #### Table of Contents
 
 1. [Overview](#overview)
