@@ -1,16 +1,42 @@
 {
   "name": "lgbarn-auditd",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "author": "Luther Barnum",
   "summary": "Configures auditd and add some standard rule",
   "license": "Apache-2.0",
   "source": "https://github.com/lgbarn/audited",
   "project_page": "https://github.com/lgbarn/audited",
   "issues_url": "https://github.com/lgbarn/audited/issues",
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "RedHat",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+   {
+      "operatingsystem": "CentOS",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    },
+    {
+      "operatingsystem": "OracleLinux",
+      "operatingsystemrelease": [
+        "5",
+        "6",
+        "7"
+      ]
+    }
+  ],
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
-      "version_requirement": ">= 4.0.0"
+      "version_requirement": ">= 3.2.0 < 5.0.0"
     }
   ]
 }
