@@ -1,12 +1,12 @@
 {
   "name": "lgbarn-auditd",
-  "version": "0.7.0",
+  "version": "0.7.1",
   "author": "Luther Barnum",
   "summary": "Configures auditd and add some standard rule",
   "license": "Apache-2.0",
-  "source": "https://github.com/lgbarn/audited",
-  "project_page": "https://github.com/lgbarn/audited",
-  "issues_url": "https://github.com/lgbarn/audited/issues",
+  "source": "https://github.com/lgbarn/auditd",
+  "project_page": "https://github.com/lgbarn/auditd",
+  "issues_url": "https://github.com/lgbarn/auditd/issues",
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
