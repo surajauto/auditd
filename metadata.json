@@ -2,11 +2,11 @@
   "name": "lgbarn-auditd",
   "version": "0.5.0",
   "author": "Luther Barnum",
-  "summary": "Configures auditd to Jabil Standards",
-  "license": "Apache 2.0",
+  "summary": "Configures auditd and add some standard rule",
+  "license": "Apache-2.0",
   "source": "https://github.com/lgbarn/audited",
-  "project_page": null,
-  "issues_url": null,
+  "project_page": "https://github.com/lgbarn/audited",
+  "issues_url": "https://github.com/lgbarn/audited/issues",
   "dependencies": [
     {
       "name": "puppetlabs-stdlib",
