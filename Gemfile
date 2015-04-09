@@ -9,3 +9,4 @@ gem 'rspec-puppet',  :require => false
 gem 'rake',  :require => false
 gem 'beaker-rspec',  :require => false
 gem 'serverspec',  :require => false
+gem 'metadata-json-lint',  :require => false
