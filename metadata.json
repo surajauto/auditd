@@ -1,6 +1,6 @@
 {
   "name": "lgbarn-auditd",
-  "version": "0.7.3",
+  "version": "0.8.0",
   "author": "Luther Barnum",
   "summary": "Configures auditd and add some standard rule",
   "license": "Apache-2.0",
