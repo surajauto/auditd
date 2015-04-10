@@ -55,10 +55,11 @@ class auditd (
   
 ) inherits auditd::params {
 
-  anchor { 'auditd::begin': } ->
-  class { 'auditd::install': } ->
-  class { 'auditd::config': } ~>
-  class { 'auditd::service': } ->
-  anchor { 'auditd::end': }
+  contain auditd::install
+  contain auditd::config
+  contain auditd::service
 
+  Class['auditd::install'] ->
+  Class['auditd::config'] ->
+  Class['auditd::service']
 }
