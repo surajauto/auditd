@@ -1,6 +1,6 @@
 fixtures:
-  repositories:
-    "stdlib": "https://github.com/puppetlabs/puppetlabs-stdlib"
-    "staging": "https://github.com/nanliu/puppet-staging"
+  forge modules:
+    "stdlib": "puppetlabs/stdlib"
+    "staging": "manliu/staging"
   symlinks:
-    "logrotate": "#{source_dir}"
+    "auditd": "#{source_dir}"
