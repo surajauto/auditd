@@ -47,13 +47,13 @@ Use the following syntax to get this module working:
 ###Classes
 
 ####Public Classes
-*[`auditd`](#auditd): Installs and configures auditd on your server.
+- [`auditd`](#auditd): Installs and configures auditd on your server.
 
 ####Private Classes
-*[`auditd::config`](#auditdconfig): Configures the module. 
-*[`auditd::install`](#auditdinstall): Installs auditd package on your server.
-*[`auditd::params`](#auditdparams): Handle parameters to module.
-*[`auditd::service`](#auditdservice): Configures auditd service.
+- [`auditd::config`](#auditdconfig): Configures the module. 
+- [`auditd::install`](#auditdinstall): Installs auditd package on your server.
+- [`auditd::params`](#auditdparams): Handle parameters to module.
+- [`auditd::service`](#auditdservice): Configures auditd service.
 
 ## Limitations
 
