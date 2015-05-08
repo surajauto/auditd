@@ -1,4 +1,4 @@
-# auditd
+
 
 [![Build Status](https://travis-ci.org/lgbarn/auditd.png?branch=master)](https://travis-ci.org/lgbarn/auditd)
 
@@ -18,19 +18,12 @@
 
 ## Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves.
-This is your 30 second elevator pitch for your module. Consider including
-OS/Puppet version it works with.
+This module will install a basic template for auditd rules. 
+Ths should be a starting point for security auditing your Linux server
 
 ## Module Description
 
-If applicable, this section should have a brief description of the technology
-the module integrates with and what that integration enables. This section
-should answer the questions: "What does this module *do*?" and "Why would I use
-it?"
-
-If your module has a range of functionality (installation, configuration,
-management, etc.) this is the time to mention it.
+This module edits the default /etc/audit/auditd.conf and adds a /etc/audit/audit.rules file to the server and restarts auditd.
 
 ## Setup
 
@@ -41,42 +34,34 @@ management, etc.) this is the time to mention it.
 * This is a great place to stick any warnings.
 * Can be in list or paragraph form.
 
-### Setup Requirements **OPTIONAL**
-
-If your module requires anything extra before setting up (pluginsync enabled,
-etc.), mention it here.
-
 ### Beginning with auditd
 
-The very basic steps needed for a user to get the module up and running.
-
-If your most recent release breaks compatibility or requires particular steps
-for upgrading, you may wish to include an additional section here: Upgrading
-(For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+Install module with `puppet module install auditd` or use r10k.
 
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing
-the fancy stuff with your module here.
+Use the following syntax to get this module working:
+`include auditd`
 
 ## Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module.
-This section should include all of the under-the-hood workings of your module so
-people know what the module is touching on their system but don't need to mess
-with things. (We are working on automating this section!)
+###Classes
+
+####Public Classes
+*[`auditd`](#auditd): Installs and configures auditd on your server.
+
+####Private Classes
+*[`auditd::config`](#auditdconfig): Configures the module. 
+*[`auditd::install`](#auditdinstall): Installs auditd package on your server.
+*[`auditd::params`](#auditdparams): Handle parameters to module.
+*[`auditd::service`](#auditdservice): Configures auditd service.
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+This module has only been tested on RedHat,CentOS and it derivatives. i
+All other distributions are not supported.
 
 ## Development
 
-Since your module is awesome, other users will want to play with it. Let them
-know what the ground rules for contributing are.
+This module is public and can be found on [github](https://github.com/lgbarn/auditd)
 
-## Release Notes/Contributors/Etc **Optional**
-
-If you aren't using changelog, put your release notes here (though you should
-consider using changelog). You may also add any additional sections you feel are
-necessary or important to include here. Please use the `## ` header.
