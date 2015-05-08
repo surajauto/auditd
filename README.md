@@ -9,7 +9,6 @@
 2. [Module Description - What the module does and why it is useful](#module-description)
 3. [Setup - The basics of getting started with auditd](#setup)
     * [What auditd affects](#what-auditd-affects)
-    * [Setup requirements](#setup-requirements)
     * [Beginning with auditd](#beginning-with-auditd)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
@@ -19,7 +18,7 @@
 ## Overview
 
 This module will install a basic template for auditd rules. 
-Ths should be a starting point for security auditing your Linux server
+Thss should be a starting point for security auditing on your Linux server
 
 ## Module Description
 
@@ -29,10 +28,10 @@ This module edits the default /etc/audit/auditd.conf and adds a /etc/audit/audit
 
 ### What auditd affects
 
-* A list of files, packages, services, or operations that the module will alter,
-  impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form.
+* /etc/audit/auditd.conf
+* /etc/audit/audit.rules
+* RPM Package audit will be installed
+* Servce auditd will be turned on and started
 
 ### Beginning with auditd
 
