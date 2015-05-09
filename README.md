@@ -1,7 +1,5 @@
 
-
 [![Build Status](https://travis-ci.org/lgbarn/auditd.png?branch=master)](https://travis-ci.org/lgbarn/auditd)
-
 
 #### Table of Contents
 
@@ -35,7 +33,7 @@ This module edits the default /etc/audit/auditd.conf and adds a /etc/audit/audit
 
 ### Beginning with auditd
 
-Install module with `puppet module install auditd` or use r10k.
+Install module with `sudo puppet module install auditd` or use r10k.
 
 ## Usage
 
@@ -50,17 +48,17 @@ Use the following syntax to get this module working:
 - [`auditd`](#auditd): Installs and configures auditd on your server.
 
 ####Private Classes
-- [`auditd::config`](#auditdconfig): Configures the module. 
-- [`auditd::install`](#auditdinstall): Installs auditd package on your server.
-- [`auditd::params`](#auditdparams): Handle parameters to module.
-- [`auditd::service`](#auditdservice): Configures auditd service.
+* [`auditd::config`](#auditdconfig): Configures the module. 
+* [`auditd::install`](#auditdinstall): Installs auditd package on your server.
+* [`auditd::params`](#auditdparams): Sets parameters for module.
+* [`auditd::service`](#auditdservice): Configures auditd service.
 
 ## Limitations
 
-This module has only been tested on RedHat,CentOS and it derivatives. i
+This module has only been tested on RedHat,CentOS and it derivatives. 
 All other distributions are not supported.
 
 ## Development
 
-This module is public and can be found on [github](https://github.com/lgbarn/auditd)
+This module is public and can be found on github[here](https://github.com/lgbarn/auditd)
 
