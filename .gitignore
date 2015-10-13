@@ -3,3 +3,4 @@ log/
 .project/*
 pkg/
 spec/fixtures/
+Gemfile.lock
