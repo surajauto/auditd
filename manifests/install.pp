@@ -35,11 +35,13 @@
 #
 # Copyright 2014 Jabil, unless otherwise noted.
 #
-class auditd::install inherits auditd {
-
+class auditd::install (
+    $package_ensure = $::auditd::params::package_ensure,
+    $package_name   = $::auditd::params::package_name,
+) {
   package { 'audit':
-    ensure => $auditd::params::package_ensure,
-    name   => $auditd::params::package_name,
+    ensure => $package_ensure,
+    name   => $package_name,
   }
 
 }
