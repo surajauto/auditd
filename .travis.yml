@@ -36,15 +36,9 @@ matrix:
   - rvm: 2.1.5
     env: PUPPET_GEM_VERSION="~> 3.8.0"
   - rvm: 2.1.5
-    env: PUPPET_GEM_VERSION="~> 4.0.0" FUTURE_PARSER="yes"
-  - rvm: 2.1.5
     env: PUPPET_GEM_VERSION="~> 4.0.0"
   - rvm: 2.1.5
-    env: PUPPET_GEM_VERSION="~> 4.1.0" FUTURE_PARSER="yes"
-  - rvm: 2.1.5
     env: PUPPET_GEM_VERSION="~> 4.1.0"
-  - rvm: 2.1.5
-    env: PUPPET_GEM_VERSION="~> 4.2.0" FUTURE_PARSER="yes"
   - rvm: 2.1.5
     env: PUPPET_GEM_VERSION="~> 4.2.0"
 notifications:
