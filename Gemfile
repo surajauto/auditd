@@ -16,6 +16,7 @@ group :development, :unit_tests do
   gem 'puppetlabs_spec_helper',  :require => false
   gem 'simplecov',               :require => false
   gem 'puppet_facts',            :require => false
+  gem 'vagrant-wrapper',            :require => false
   gem 'json',                    :require => false
 end
 
