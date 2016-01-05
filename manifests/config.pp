@@ -35,33 +35,22 @@
 #
 # Copyright 2014 Jabil, unless otherwise noted.
 #
-class auditd::config (
-  $auditd_file_ensure      = $::auditd::params::auditd_file_ensure,
-  $auditd_file_source      = $::auditd::params::auditd_file_source,
-  $auditd_file_owner       = $::auditd::params::auditd_file_owner,
-  $auditd_file_group       = $::auditd::params::auditd_file_group,
-  $auditd_file_mode        = $::auditd::params::auditd_file_mode,
-  $audit_rules_file_ensure = $::auditd::params::audit_rules_file_ensure,
-  $audit_rules_file_source = $::auditd::params::audit_rules_file_source,
-  $audit_rules_file_owner  = $::auditd::params::audit_rules_file_owner,
-  $audit_rules_file_group  = $::auditd::params::audit_rules_file_group,
-  $audit_rules_file_mode   = $::auditd::params::audit_rules_file_mode,
-) {
+class auditd::config inherits auditd {
 
-  file { '/etc/audit/auditd.conf':
-    ensure => $auditd_file_ensure,
-    source => $auditd_file_source,
-    owner  => $auditd_file_owner,
-    group  => $auditd_file_group,
-    mode   => $auditd_file_mode,
+  file { $::auditd::params::auditd_file:
+    ensure => $::auditd::params::auditd_file_ensure,
+    source => $::auditd::params::auditd_file_source,
+    owner  => $::auditd::params::auditd_file_owner,
+    group  => $::auditd::params::auditd_file_group,
+    mode   => $::auditd::params::auditd_file_mode,
   }
 
-  file { '/etc/audit/audit.rules':
-    ensure => $audit_rules_file_ensure,
-    source => $audit_rules_file_source,
-    owner  => $audit_rules_file_owner,
-    group  => $audit_rules_file_group,
-    mode   => $audit_rules_file_mode,
+  file { $::auditd::params::auditd_rules_file:
+    ensure => $::auditd::params::audit_rules_file_ensure,
+    source => $::auditd::params::audit_rules_file_source,
+    owner  => $::auditd::params::audit_rules_file_owner,
+    group  => $::auditd::params::audit_rules_file_group,
+    mode   => $::auditd::params::audit_rules_file_mode,
   }
 
 }

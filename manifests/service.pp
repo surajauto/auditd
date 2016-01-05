@@ -35,26 +35,19 @@
 #
 # Copyright 2014 Jabil, unless otherwise noted.
 #
-class auditd::service (
-  $service_ensure     = $::auditd::params::service_ensure,
-  $service_enable     = $::auditd::params::service_enable,
-  $service_name       = $::auditd::params::service_name,
-  $service_hasstatus  = $::auditd::params::service_hasstatus,
-  $service_hasrestart = $::auditd::params::service_hasrestart,
-  $service_manage     = $::auditd::params::service_manage,
-) {
+class auditd::service inherits auditd {
 
-  if ! ($service_ensure in [ 'running', 'stopped' ]) {
+  if ! ($::auditd::params::service_ensure in [ 'running', 'stopped' ]) {
     fail('service_ensure parameter must be running or stopped')
   }
 
-  if $service_manage == true {
+  if $::auditd::params::service_manage == true {
     service { 'auditd':
-      ensure     => $service_ensure,
-      enable     => $service_enable,
-      name       => $service_name,
-      hasstatus  => $service_hasstatus,
-      hasrestart => $service_hasrestart,
+      ensure     => $::auditd::params::service_ensure,
+      enable     => $::auditd::params::service_enable,
+      name       => $::auditd::params::service_name,
+      hasstatus  => $::auditd::params::service_hasstatus,
+      hasrestart => $::auditd::params::service_hasrestart,
     }
   }
 
