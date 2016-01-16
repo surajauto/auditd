@@ -1,4 +1,20 @@
 ### Changelog
+#### 1.0.0
+- Deleted Gemfile.lock because it is not needed
+- Added several directories that need to be ignored and should not be tracked
+- Modified Gemfile and spec requirements to rewrite spec tests
+- Modified spec tests and module to new format for puppet 4 specifications
+- Added Gemfile.lock file
+- Added support for Puppet versions 3.8, 4.0, 4.1 and 4.2 for travis-ci testing
+- Removed FUTURE_PARSER from .travis file because future is now
+- Removed extra class check
+- Added space for proper markdown formatting
+- Added module install specifics
+- Removed testing code for server temporarily
+- Added vagrant-wrapper dependency
+- Cleaned up code to conform to best practice
+- Modified .travis.yml so CI is only automated to master and production branches
+
 
 #### 0.8.0
 - converted anchors to contain statements
@@ -67,7 +83,7 @@
 - changed resource to file
 
 
-#### 4.0.0
+#### 0.4.0
 - added project file
 - modified source metadata
 - modified version_requirement keyword
