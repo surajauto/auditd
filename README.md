@@ -16,7 +16,7 @@
 ## Overview
 
 This module will install a basic template for auditd rules. 
-Thss should be a starting point for security auditing on your Linux server
+This should be a starting point for security auditing on your Linux server
 
 ## Module Description
 
@@ -56,26 +56,11 @@ class { 'auditd': }
 #### Public Classes
 - `auditd`: Installs and configures auditd on your server.
 
-<<<<<<< HEAD
 ####Private Classes
-* [`auditd::config`](#auditdconfig): Configures the module. 
-* [`auditd::install`](#auditdinstall): Installs auditd package on your server.
-* [`auditd::params`](#auditdparams): Sets parameters for module.
-* [`auditd::service`](#auditdservice): Configures auditd service.
-=======
-#### Private Classes
-<<<<<<< HEAD
 - [`auditd::config`](#auditdconfig): Configures the module. 
 - [`auditd::install`](#auditdinstall): Installs auditd package on your server.
 - [`auditd::params`](#auditdparams): Handle parameters to module.
 - [`auditd::service`](#auditdservice): Configures auditd service.
->>>>>>> e4b38a3... added space for proper markdown formatting
-=======
-- `auditd::config`: Configures the module. 
-- `auditd::install`: Installs auditd package on your server.
-- `auditd::params`: Handle parameters to module.
-- `auditd::service`: Configures auditd service.
->>>>>>> 5bc0cb1... added module install specifics
 
 ## Limitations
 
