@@ -36,7 +36,7 @@
 # Copyright 2014 Jabil, unless otherwise noted.
 #
 class auditd::params {
-  
+
   # Basic Config 
   $service_manage          = true
   $service_ensure          = 'running'

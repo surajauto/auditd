@@ -52,14 +52,14 @@ class auditd (
   $audit_rules_file_owner   = $::auditd::params::audit_rules_file_owner,
   $audit_rules_file_group   = $::auditd::params::audit_rules_file_group,
   $audit_rules_file_mode    = $::auditd::params::audit_rules_file_mode,
-  
+
 ) inherits auditd::params {
 
   contain auditd::install
   contain auditd::config
   contain auditd::service
 
-  Class['auditd::install'] ->
-  Class['auditd::config'] ~>
-  Class['auditd::service']
+  Class['auditd::install']
+  -> Class['auditd::config']
+  ~> Class['auditd::service']
 }
