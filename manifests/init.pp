@@ -56,8 +56,9 @@ class auditd (
   $audit_rules_file_owner,
   $audit_rules_file_group,
   $audit_rules_file_mode,
-  Hash $auditd_conf = lookup('auditd::conf',Hash,hash),
-  Array $auditd_rules = []
+  String $auditd_buffer = '8192',
+  Hash   $auditd_conf = lookup('auditd::conf',Hash,hash),
+  Array  $auditd_rules = []
 ) {
 
   contain auditd::install

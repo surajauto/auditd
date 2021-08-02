@@ -11,14 +11,23 @@ describe 'auditd::config', type: :class do
         'owner'  => 'root',
         'group'  => 'root',
         'mode'   => '0640',
+        'content'=> %r{flush = INCREMENTAL\nfreq = 20}
+      )
+      is_expected.to contain_file('/etc/audit/auditd.conf').with(
+        'ensure' => 'file',
+        'owner'  => 'root',
+        'group'  => 'root',
+        'mode'   => '0640',
+        'content'=> %r{^#krb5_key_file}
       )
     end
     it do
       is_expected.to contain_file('/etc/audit/audit.rules').with(
-        'ensure' => 'file',
-        'owner' => 'root',
-        'group' => 'root',
-        'mode' => '0640',
+        'ensure'  => 'file',
+        'owner'   => 'root',
+        'group'   => 'root',
+        'mode'    => '0640',
+        'content' => %r{# Identity changes\n-w /etc/group -p wa -k identity}
       )
     end
   end

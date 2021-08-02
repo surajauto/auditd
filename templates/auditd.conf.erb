@@ -4,5 +4,9 @@
 #****************************
 
 <% @auditd_conf.each do |key,value| -%>
-<%= key %> = <%= value %>
+<% if !value.to_s.empty? -%>
+<%= key %> = <%= value -%>
+<% else -%>
+#<%= key %> = <%= value -%>
+<% end %>
 <% end %>
