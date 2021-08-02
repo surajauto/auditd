@@ -37,8 +37,8 @@
 #
 class auditd::install inherits auditd {
 
-  package { $::auditd::params::package_name:
-    ensure => $::auditd::params::package_ensure,
+  package { $auditd::package_name:
+    ensure => $auditd::package_ensure,
   }
 
 }

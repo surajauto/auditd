@@ -37,20 +37,20 @@
 #
 class auditd::config inherits auditd {
 
-  file { $::auditd::params::auditd_file:
-    ensure => $::auditd::params::auditd_file_ensure,
-    source => $::auditd::params::auditd_file_source,
-    owner  => $::auditd::params::auditd_file_owner,
-    group  => $::auditd::params::auditd_file_group,
-    mode   => $::auditd::params::auditd_file_mode,
+  file { $auditd::auditd_file:
+    ensure => $auditd::auditd_file_ensure,
+    source => $auditd::auditd_file_source,
+    owner  => $auditd::auditd_file_owner,
+    group  => $auditd::auditd_file_group,
+    mode   => $auditd::auditd_file_mode,
   }
 
-  file { $::auditd::params::auditd_rules_file:
-    ensure => $::auditd::params::audit_rules_file_ensure,
-    source => $::auditd::params::audit_rules_file_source,
-    owner  => $::auditd::params::audit_rules_file_owner,
-    group  => $::auditd::params::audit_rules_file_group,
-    mode   => $::auditd::params::audit_rules_file_mode,
+  file { $auditd::auditd_rules_file:
+    ensure => $auditd::audit_rules_file_ensure,
+    source => $auditd::audit_rules_file_source,
+    owner  => $auditd::audit_rules_file_owner,
+    group  => $auditd::audit_rules_file_group,
+    mode   => $auditd::audit_rules_file_mode,
   }
 
 }
