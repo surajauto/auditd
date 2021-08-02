@@ -39,7 +39,7 @@ class auditd::config inherits auditd {
 
   file { $auditd::auditd_file:
     ensure => $auditd::auditd_file_ensure,
-    source => $auditd::auditd_file_source,
+    source => template('auditd/auditd.conf.erb'),
     owner  => $auditd::auditd_file_owner,
     group  => $auditd::auditd_file_group,
     mode   => $auditd::auditd_file_mode,

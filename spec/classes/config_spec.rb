@@ -8,7 +8,6 @@ describe 'auditd::config', type: :class do
     it do
       is_expected.to contain_file('/etc/audit/auditd.conf').with(
         'ensure' => 'file',
-        'source' => 'puppet:///modules/auditd/auditd.conf',
         'owner'  => 'root',
         'group'  => 'root',
         'mode'   => '0640',
@@ -17,7 +16,6 @@ describe 'auditd::config', type: :class do
     it do
       is_expected.to contain_file('/etc/audit/audit.rules').with(
         'ensure' => 'file',
-        'source' => 'puppet:///modules/auditd/audit.rules',
         'owner' => 'root',
         'group' => 'root',
         'mode' => '0640',

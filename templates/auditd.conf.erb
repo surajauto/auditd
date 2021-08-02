@@ -1,0 +1,8 @@
+#****************************
+# This file is Puppet managed
+# DO NOT EDIT
+#****************************
+
+<% @auditd_conf.each do |key,value| -%>
+<%= key %> = <%= value %>
+<% end %>
