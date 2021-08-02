@@ -7,6 +7,12 @@
   "source": "https://github.com/lgbarn/auditd",
   "project_page": "https://github.com/lgbarn/auditd",
   "issues_url": "https://github.com/lgbarn/auditd/issues",
+  "dependencies": [
+    {
+      "name": "puppetlabs-stdlib",
+      "version_requirement": ">= 3.2.0 < 5.0.0"
+    }
+  ],
   "operatingsystem_support": [
     {
       "operatingsystem": "RedHat",
@@ -16,7 +22,7 @@
         "7"
       ]
     },
-   {
+    {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
         "5",
@@ -33,11 +39,13 @@
       ]
     }
   ],
-  "dependencies": [
+  "requirements": [
     {
-      "name": "puppetlabs-stdlib",
-      "version_requirement": ">= 3.2.0 < 5.0.0"
+      "name": "puppet",
+      "version_requirement": ">= 6.21.0 < 8.0.0"
     }
-  ]
+  ],
+  "pdk-version": "2.1.1",
+  "template-url": "pdk-default#2.1.1",
+  "template-ref": "tags/2.1.1-0-g03daa92"
 }
-
