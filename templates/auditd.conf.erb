@@ -3,7 +3,7 @@
 # DO NOT EDIT
 #****************************
 
-<% @auditd_conf.each do |key,value| -%>
+<% @_conf.each do |key,value| -%>
 <% if !value.to_s.empty? -%>
 <%= key %> = <%= value -%>
 <% else -%>

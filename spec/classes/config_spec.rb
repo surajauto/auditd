@@ -27,6 +27,13 @@ describe 'auditd::config', type: :class do
         'owner'   => 'root',
         'group'   => 'root',
         'mode'    => '0640',
+        'content' => %r{^-b 8192}
+      )
+      is_expected.to contain_file('/etc/audit/audit.rules').with(
+        'ensure'  => 'file',
+        'owner'   => 'root',
+        'group'   => 'root',
+        'mode'    => '0640',
         'content' => %r{# Identity changes\n-w /etc/group -p wa -k identity}
       )
     end
