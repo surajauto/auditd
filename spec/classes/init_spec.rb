@@ -43,6 +43,13 @@ describe 'auditd' do
         'mode'    => '0640',
         'content' => %r{-a exit,always -F arch=b64 -S execve\n-a exit,always -F arch=b32 -S execve}
       )
+      is_expected.not_to contain_file('/etc/audit/audit.rules').with(
+        'ensure'  => 'file',
+        'owner'   => 'root',
+        'group'   => 'root',
+        'mode'    => '0640',
+        'content' => %r{-w /usr/sbin/groupadd -p x -k group_modification}
+      )
     end
   end
 end
