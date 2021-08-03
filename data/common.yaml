@@ -9,13 +9,11 @@ auditd::package_name: 'audit'
 auditd::package_ensure: 'present'
 auditd::auditd_file: '/etc/audit/auditd.conf'
 auditd::auditd_file_ensure: file
-auditd::auditd_file_source: 'puppet:///modules/auditd/auditd.conf'
 auditd::auditd_file_owner: 'root'
 auditd::auditd_file_group: 'root'
 auditd::auditd_file_mode: '0640'
 auditd::auditd_rules_file: '/etc/audit/audit.rules'
 auditd::audit_rules_file_ensure: file
-auditd::audit_rules_file_source: 'puppet:///modules/auditd/audit.rules'
 auditd::audit_rules_file_owner: 'root'
 auditd::audit_rules_file_group: 'root'
 auditd::audit_rules_file_mode: '0640'
