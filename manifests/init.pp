@@ -1,40 +1,14 @@
-# == Class: auditd
+# @summary Manage auditd service, configuration and rules.
 #
-# Ensures auditd configuration is per Jabil Standard
+# This will ensure that the auditd package is installed,
+# deploy an auditd.conf file and an auditd.rules file.
+# The config is built from a default config hash stored in module Hiera
+# with over-rides being passed in via the $auditd_conf parameter.
+# Rules will use the default set in module Hiera unless an array of rules
+# is passed in via $auditd_rules, which will replace the default ruleset.
 #
-# === Parameters
-#
-# Document parameters here.
-#
-# [*sample_parameter*]
-#   Explanation of what this parameter affects and what it defaults to.
-#   e.g. "Specify one or more upstream ntp servers as an array."
-#
-# === Variables
-#
-# Here you should define a list of variables that this module would require.
-#
-# [*sample_variable*]
-#   Explanation of how this variable affects the funtion of this class and if
-#   it has a default. e.g. "The parameter enc_ntp_servers must be set by the
-#   External Node Classifier as a comma separated list of hostnames." (Note,
-#   global variables should be avoided in favor of class parameters as
-#   of Puppet 2.6.)
-#
-# === Examples
-#
-#  class { auditd:
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#  }
-#
-# === Authors
-#
-# sillgen <steven_illgen@jabil.com>
-#
-# === Copyright
-#
-# Copyright 2014 Jabil, unless otherwise noted.
-#
+# @example
+#   include auditd
 class auditd (
   Boolean $service_manage,
   String $service_ensure,

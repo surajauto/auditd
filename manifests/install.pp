@@ -20,21 +20,9 @@
 #   External Node Classifier as a comma separated list of hostnames." (Note,
 #   global variables should be avoided in favor of class parameters as
 #   of Puppet 2.6.)
+# @summary Manage the auditd package
 #
-# === Examples
-#
-#  class { auditd:
-#    servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
-#  }
-#
-# === Authors
-#
-# sillgen <steven_illgen@jabil.com>
-#
-# === Copyright
-#
-# Copyright 2014 Jabil, unless otherwise noted.
-#
+# @api private
 class auditd::install inherits auditd {
 
   package { $auditd::package_name:
