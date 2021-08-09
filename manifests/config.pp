@@ -12,11 +12,11 @@ class auditd::config inherits auditd {
   }
 
   file { $auditd::auditd_rules_file:
-    ensure  => $auditd::audit_rules_file_ensure,
+    ensure  => $auditd::auditd_rules_file_ensure,
     content => template('auditd/auditd.rules.erb'),
-    owner   => $auditd::audit_rules_file_owner,
-    group   => $auditd::audit_rules_file_group,
-    mode    => $auditd::audit_rules_file_mode,
+    owner   => $auditd::auditd_rules_file_owner,
+    group   => $auditd::auditd_rules_file_group,
+    mode    => $auditd::auditd_rules_file_mode,
   }
 
 }
