@@ -4,7 +4,7 @@ auditd::service_ensure: 'running'
 auditd::service_enable: true
 auditd::service_name: 'auditd'
 auditd::service_hasstatus: true
-auditd::service_hasrestart: true
+auditd::service_hasrestart: false
 auditd::package_name: 'audit'
 auditd::package_ensure: 'present'
 auditd::auditd_file: '/etc/audit/auditd.conf'
