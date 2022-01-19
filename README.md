@@ -17,7 +17,7 @@ This module will install a basic template for auditd rules.
 
 ## Module Description
 
-This module edits the default /etc/audit/auditd.conf, adds a /etc/audit/audit.rules file to the server and restarts auditd.
+This module edits the default /etc/audit/auditd.conf, adds a /etc/audit/rules.d/audit.rules file to the server and restarts auditd.
 
 ## Setup
 
@@ -49,7 +49,7 @@ class {'auditd':
 ### What auditd affects
 
 * /etc/audit/auditd.conf
-* /etc/audit/audit.rules
+* /etc/audit/rules.d/audit.rules
 * RPM Package audit will be installed
 * Service auditd will be turned on and started
 

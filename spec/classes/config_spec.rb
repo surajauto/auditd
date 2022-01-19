@@ -22,19 +22,24 @@ describe 'auditd::config', type: :class do
       )
     end
     it do
-      is_expected.to contain_file('/etc/audit/audit.rules').with(
+      is_expected.to contain_file('/etc/audit/rules.d/audit.rules').with(
         'ensure'  => 'file',
         'owner'   => 'root',
         'group'   => 'root',
         'mode'    => '0640',
         'content' => %r{^-b 8192}
       )
-      is_expected.to contain_file('/etc/audit/audit.rules').with(
+      is_expected.to contain_file('/etc/audit/rules.d/audit.rules').with(
         'ensure'  => 'file',
         'owner'   => 'root',
         'group'   => 'root',
         'mode'    => '0640',
         'content' => %r{# Identity changes\n-w /etc/group -p wa -k identity}
+      )
+      is_expected.to contain_exec('augenrules').with(
+        'command'     => ['/sbin/augenrules', '--load'],
+        'user'        => 'root',
+        'refreshonly' => 'true',
       )
     end
   end

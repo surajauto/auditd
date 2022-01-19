@@ -2,7 +2,7 @@
 
 #### 1.0.2
 
-* Changed functionality to use augenrules and place configs in /etc/audit/rules.d/ binary instead of /etc/audit/audit.rules
+* Changed functionality to use augenrules binary and place configs in /etc/audit/rules.d/ instead of /etc/audit/audit.rules
 
 #### 1.0.1
 

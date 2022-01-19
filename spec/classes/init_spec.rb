@@ -29,21 +29,21 @@ describe 'auditd' do
                    'auditd_buffer' => '4096'}}
     it { is_expected.to contain_class('auditd::config') }
     it do
-      is_expected.to contain_file('/etc/audit/audit.rules').with(
+      is_expected.to contain_file('/etc/audit/rules.d/audit.rules').with(
         'ensure'  => 'file',
         'owner'   => 'root',
         'group'   => 'root',
         'mode'    => '0640',
         'content' => %r{^-b 4096}
       )
-      is_expected.to contain_file('/etc/audit/audit.rules').with(
+      is_expected.to contain_file('/etc/audit/rules.d/audit.rules').with(
         'ensure'  => 'file',
         'owner'   => 'root',
         'group'   => 'root',
         'mode'    => '0640',
         'content' => %r{-a exit,always -F arch=b64 -S execve\n-a exit,always -F arch=b32 -S execve}
       )
-      is_expected.not_to contain_file('/etc/audit/audit.rules').with(
+      is_expected.not_to contain_file('/etc/audit/rules.d/audit.rules').with(
         'ensure'  => 'file',
         'owner'   => 'root',
         'group'   => 'root',

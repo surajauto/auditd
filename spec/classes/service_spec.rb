@@ -2,7 +2,7 @@
 require 'spec_helper'
 describe 'auditd::service', type: :class do
   #    let(:service_manage) => { { 'true' } }
-  #    let(:params) { { :service_ensure => 'file' ,:service_enable => 'true', :service_name => 'auditd' ,:service_hasstatus => 'true', :service_hasrestart => 'true', :service_manage => 'true'} }
+  #    let(:params) { { :service_ensure => 'file' ,:service_enable => 'true', :service_name => 'auditd' ,:service_hasstatus => 'true', :service_hasrestart => 'false', :service_manage => 'true'} }
 
   context 'with defaults for all parameters' do
     it { is_expected.to contain_class('auditd::service') }
@@ -12,7 +12,7 @@ describe 'auditd::service', type: :class do
         'enable'       => 'true',
         'name'         => 'auditd',
         'hasstatus'    => 'true',
-        'hasrestart'   => 'true',
+        'hasrestart'   => 'false',
       )
     end
   end
