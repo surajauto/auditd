@@ -17,6 +17,13 @@ class auditd::config inherits auditd {
     owner   => $auditd::auditd_rules_file_owner,
     group   => $auditd::auditd_rules_file_group,
     mode    => $auditd::auditd_rules_file_mode,
+    notify  => Exec['augenrules'],
+  }
+
+  exec { 'augenrules':
+    command     => ['/sbin/augenrules', '--load'],
+    user        => $auditd::auditd_rules_file_owner,
+    refreshonly => true,
   }
 
 }

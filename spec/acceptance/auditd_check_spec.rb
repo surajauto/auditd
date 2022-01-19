@@ -25,7 +25,7 @@ describe 'auditd class' do
       it { is_expected.to be_grouped_into 'root' }
       it { is_expected.to be_mode '640' }
     end
-    describe file('/etc/audit/audit.rules') do
+    describe file('/etc/audit/rules.d/audit.rules') do
       it { is_expected.to be_file }
       it { is_expected.to be_owned_by 'root' }
       it { is_expected.to be_grouped_into 'root' }
