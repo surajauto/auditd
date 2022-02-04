@@ -1,6 +1,6 @@
 {
   "name": "ubeek-auditd",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "Levi Jarick",
   "summary": "Configures auditd and add some standard rule",
   "license": "Apache-2.0",

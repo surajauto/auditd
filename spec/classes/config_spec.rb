@@ -37,7 +37,7 @@ describe 'auditd::config', type: :class do
         'content' => %r{# Identity changes\n-w /etc/group -p wa -k identity}
       )
       is_expected.to contain_exec('augenrules').with(
-        'command'     => ['/sbin/augenrules', '--load'],
+        'command'     => '/sbin/augenrules --load',
         'user'        => 'root',
         'refreshonly' => 'true',
       )
