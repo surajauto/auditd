@@ -21,7 +21,7 @@ class auditd::config inherits auditd {
   }
 
   exec { 'augenrules':
-    command     => ['/sbin/augenrules', '--load'],
+    command     => '/sbin/augenrules --load',
     user        => $auditd::auditd_rules_file_owner,
     refreshonly => true,
   }

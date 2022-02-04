@@ -1,5 +1,9 @@
 ### Changelog
 
+#### 1.0.3
+
+* Fixed Exec['augenrules'] to be a string command
+
 #### 1.0.2
 
 * Changed functionality to use augenrules binary and place configs in /etc/audit/rules.d/ instead of /etc/audit/audit.rules
