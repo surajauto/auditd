@@ -3,6 +3,11 @@
 ## [Unreleased]
 
 * Changes from executing pdk update
+* Added entries to .gitignore
+* Updated metadata.json to remove support for Oracle Linux, Redhat 5,6 and CentOS 5,6
+* Updated metadata.json to add support for Redhat 8
+* Updated metadata.json to change puppetlabs-stdlib version_requirement from: >= 3.2.0 < 7.0.0 to: ">= 9.0.0 <= 9.6.0"
+* Updated metadata.json to change puppet version_requirement from: >= 6.21.0 < 8.0.0 to: >= 7.24 < 9.0.0
 
 #### 1.0.3
 
