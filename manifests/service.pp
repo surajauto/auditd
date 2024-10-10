@@ -2,8 +2,7 @@
 #
 # @api private
 class auditd::service inherits auditd {
-
-  if ! ($auditd::service_ensure in [ 'running', 'stopped' ]) {
+  if ! ($auditd::service_ensure in ['running', 'stopped']) {
     fail('service_ensure parameter must be running or stopped')
   }
 
@@ -16,5 +15,4 @@ class auditd::service inherits auditd {
       hasrestart => $auditd::service_hasrestart,
     }
   }
-
 }
