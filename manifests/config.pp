@@ -2,7 +2,6 @@
 #
 # @api private
 class auditd::config inherits auditd {
-
   file { $auditd::auditd_file:
     ensure  => $auditd::auditd_file_ensure,
     content => template('auditd/auditd.conf.erb'),
@@ -25,5 +24,4 @@ class auditd::config inherits auditd {
     user        => $auditd::auditd_rules_file_owner,
     refreshonly => true,
   }
-
 }
